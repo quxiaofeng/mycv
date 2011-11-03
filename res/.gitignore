@@ -1,0 +1,9 @@
+# ignore vim tempfile
+*~
+*.swp
+# ignore generated pdf file
+/MadgeCV.pdf
+# ignore latex temp file
+*.log
+*.aux
+*.gz
