@@ -1,9 +1,10 @@
 # ignore vim tempfile
 *~
 *.swp
-# ignore generated pdf file
-/cv.pdf
 # ignore latex temp file
-*.log
 *.aux
-*.gz
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
