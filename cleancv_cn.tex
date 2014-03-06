@@ -1,0 +1,189 @@
+\documentclass[9pt]{article}
+\usepackage[BoldFont,SlantFont,CJKchecksingle]{xeCJK}
+\setCJKmainfont[BoldFont=SimHei]{Adina}
+\setCJKmonofont{Adina}% 设置缺省中文字体
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[]{hyperref}
+\hypersetup{
+    colorlinks=true,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=NavyBlue,%
+    urlcolor=NavyBlue,
+    breaklinks=true
+}
+\urlstyle{same}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.25in
+
+\raggedright
+
+\pagenumbering{arabic}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[3]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\ \smallskip
+      {\url{#2}}\\ \smallskip 
+      {\href{mailto:#3}{#3}}\\ \smallskip
+		\end{center}
+	\end{changemargin}
+}
+
+\newcommand{\jobtitle}[3]{
+	\textbf{#1}, \emph{#2} \hfill \emph{#3}\\
+}
+
+\newcommand{\jobdescription}[1]{
+	\begin{changemargin}{0.15in}{0.15in}
+    \smallskip
+		{#1}
+    \medskip
+	\end{changemargin}
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\contact{Qu, Xiaofeng / 曲晓峰}{http://www.quxiaofeng.me}{xiaofeng.qu.hk@ieee.org}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experience
+\header{Career History}
+
+\begin{body}
+  \vspace{14pt}
+
+    \jobtitle{Research Assistant, Part-time}{The Hong Kong Polytechnic University}{Jun 2013 - February 2014}
+    \jobdescription{
+        I had been developing a virtual and physical interactive human body model system for the Institute of Textiles \& Clothing. A real-time 3D data collecting device was interfaced with python in order to customize virtual 3D human body model, which was rendering by Python and OpenGL.
+    }
+
+    \jobtitle{Editor Assistant, Part-time}{International Journal of Image and Graphics (IJIG)\\}{September 2010 - March 2012}
+    \jobdescription{
+        I work as an editor assistant for the chief editor. I oversaw the manuscript reviewing process including submitting and reviewing; made acceptance decisions based on associate editors' suggestions; and coordinated with the publishing house. I also organized special issues; communicated with AE and reviewers to make the reviewing process efficient and not jammed. In this nineteen months, five issues (from 2011 Jan to 2012 Jan) were published under my supervision, and a simple but efficient local journal management and reporting system was developed using Microsoft Access.
+    }
+
+	\jobtitle{Research Assistant}{The Hong Kong Polytechnic University}{April 2008 - March 2010}
+    \jobdescription{
+        I had made some biometric systems based on 51soc/Cypress USB/ARM/DSP/FPGA. In four systems, I had been working as a core member.
+    }
+
+	\jobtitle{Teaching Assistant}{The Hong Kong Polytechnic University}{Fall 2010 - Fall 2012}
+    \jobdescription {
+        COMP407 Computer Graphics (2010 Fall),
+        COMP102 Enterprise Information Technology (2011 Spring), 
+        COMP210 Discrete Structures (Taught by Visiting Professor Zheng Rong, 2011 Fall),  COMP435p Biometrics Authentication (2012 Spring), 
+        ENG2003 Information Technology (2012 Fall)
+    }
+
+\end{body}
+
+\medskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{Education}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Ph.D. Candidate --- Supervisor: Prof. David Zhang}{} \hfill \emph{Present}{} \\
+	\emph{The Hong Kong Polytechnic University}, Hong Kong, China{} \\
+	%Dissertation: ``Simplifying the Programming of Intelligent Environments'' (usability in smart homes)\\
+  \medskip
+	\textbf{M.S.E. Detection Technology \& Automatic Equipment}{} \hfill \emph{March 2008}{} \\
+	\emph{The Shenyang University of Technology}, Shenyang, Liaoning, China{} \\
+	\textbf{``Outstanding Thesis''}: ``Vision Based On-line Pipe Inner and Outer Wall Surface Inspection System''\\
+    \textbf{``Outstanding Graduate''}\\
+  \medskip
+	\textbf{B.S.E. Electrical Information Engineering} \hfill \emph{July 2005} \\
+    \emph{The Shenyang University of Technology}, Shenyang, Liaoning, China{} \\
+    Thesis: ``Vision Based On-line Pipe Internal and External Wall Surface Inspection System''\\
+    \textbf{``Outstanding Graduate''}\\
+    \textbf{``Outstanding Final Year Project''}\\
+\end{body}
+
+\medskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awards and Honors
+\header{Awards and Honors}
+
+\begin{body}
+	\vspace{14pt}	
+    \textbf{Third Class Award of The 10th National Challenge Cup Contest\\
+    Golden Award of The 8th Liaoning Province Challenge Cup Contest}\\
+    The Shenyang University of Technology \hfill{} \emph{2007}\\
+    \medskip
+    \textbf{China Patent \#200620168791.X}\\
+    ``Cylinder inside and outside wall machine precision on-line image-forming testing apparatus''\\
+    \hfill{} \emph{Granted on March 12, 2008}\\
+    \medskip	
+    \textbf{China Patent \#200610155870.1}\\
+    ``On-line imaging detection device and method for cylindrical internal and external wall machining accuracy''\\
+    \hfill{} \emph{Granted on June 10, 2009}\\
+    \medskip    
+    \textbf{China Patent \#20110362063.8}\\
+    ``Human palm print image acquiring device and processing method'' \hfill{} \emph{Publication on June 27, 2012}
+\end{body}
+
+\end{document}
